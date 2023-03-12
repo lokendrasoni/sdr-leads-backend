@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node -r dotenv/config app",
+    "build": "cp -n .env.example .env || true && npm install",
+    "fake-leads": "node ./seeders/leads"
   },
   "author": "Lokendra Soni",
   "license": "MIT",
@@ -19,5 +21,8 @@
     "joi": "^17.8.3",
     "jsonwebtoken": "^9.0.0",
     "mongoose": "^7.0.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0"
   }
 }
