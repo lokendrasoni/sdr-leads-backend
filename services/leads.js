@@ -167,7 +167,7 @@ exports.leads = async ({ type, page, limit, sortField, sortOrder }) => {
                         $sort: sort
                     },
                     {
-                        $limit: limit * skip
+                        $limit: limit + skip
                     },
                     {
                         $skip: skip
